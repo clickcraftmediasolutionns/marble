@@ -192,15 +192,22 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
     <span class="me">Proizvodi od <em>prirodnog kamena</em></span>
   </h2>
   <div class="pgrid">
-    <div class="pcard"><div class="pimg" id="p1" style="background-image:url('p1.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Столешницы</span><span class="en">Countertops</span><span class="me">Radne ploče</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p2" style="background-image:url('p2.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Подоконники</span><span class="en">Windowsills</span><span class="me">Prozorske klupe</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p3" style="background-image:url('p3.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Камины</span><span class="en">Fireplaces</span><span class="me">Kamini</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p4" style="background-image:url('p4.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Лестницы</span><span class="en">Staircases</span><span class="me">Stepenice</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p5" style="background-image:url('p5.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Полы</span><span class="en">Floors</span><span class="me">Podovi</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p6" style="background-image:url('p6.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Фонтаны</span><span class="en">Fountains</span><span class="me">Fontane</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p7" style="background-image:url('p7.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Столы · Панно · Резьба</span><span class="en">Tables · Panels · Carving</span><span class="me">Stolovi · Panoi · Rezbarenje</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard"><div class="pimg" id="p8" style="background-image:url('p8.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Барные стойки</span><span class="en">Bar Counters</span><span class="me">Šankovi</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-  </div>
+<div class="pcard" onclick="openCategory('counter')"><div class="pimg" id="p1" style="background-image:url('p1.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Столешницы</span><span class="en">Countertops</span><span class="me">Radne ploče</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('all')"><div class="pimg" id="p2" style="background-image:url('p2.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Подоконники</span><span class="en">Windowsills</span><span class="me">Prozorske klupe</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('fireplace')"><div class="pimg" id="p3" style="background-image:url('p3.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Камины</span><span class="en">Fireplaces</span><span class="me">Kamini</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('all')"><div class="pimg" id="p4" style="background-image:url('p4.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Лестницы</span><span class="en">Staircases</span><span class="me">Stepenice</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('floor')"><div class="pimg" id="p5" style="background-image:url('p5.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Полы</span><span class="en">Floors</span><span class="me">Podovi</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('fountain')"><div class="pimg" id="p6" style="background-image:url('p6.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Фонтаны</span><span class="en">Fountains</span><span class="me">Fontane</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('all')"><div class="pimg" id="p7" style="background-image:url('p7.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Столы · Панно · Резьба</span><span class="en">Tables · Panels · Carving</span><span class="me">Stolovi · Panoi · Rezbarenje</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+
+<div class="pcard" onclick="openCategory('all')"><div class="pimg" id="p8" style="background-image:url('p8.jpeg')"></div><div class="pinfo"><div class="pname"><span class="ru">Барные стойки</span><span class="en">Bar Counters</span><span class="me">Šankovi</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+</div>
 </section>
 
 <!-- GALLERY -->
@@ -258,9 +265,9 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
     <div><div class="snum">1500+</div><div class="slbl"><span class="ru">довольных клиентов</span><span class="en">satisfied clients</span><span class="me">zadovoljnih klijenata</span></div></div>
   </div>
   <p class="atxt">
-    <span class="ru"><strong>Наша компания на рынке камнеобработки 11 лет.</strong> За это время мы выполнили более 5 тысяч индивидуальных заказов. Мы предлагаем полный комплекс услуг — проектирование, производство и установку изделий из натурального и искусственного камня. Работы выполняются опытными специалистами на новейшем оборудовании.</span>
-    <span class="en"><strong>Our company has been in the stone processing market for 11 years.</strong> During this time we have completed over 5,000 individual orders. We offer a full range of services — design, manufacturing and installation of natural and engineered stone products, carried out by experienced specialists.</span>
-    <span class="me"><strong>Naša kompanija djeluje na tržištu obrade kamena već 11 godina.</strong> U tom periodu izvršili smo preko 5.000 individualnih narudžbi. Nudimo kompletan paket usluga — projektovanje, proizvodnju i ugradnju proizvoda od prirodnog i vještačkog kamena.</span>
+    <span class="ru"><strong>Наша компания на рынке камнеобработки 15 лет.</strong> За это время мы выполнили более 5 тысяч индивидуальных заказов. Мы предлагаем полный комплекс услуг — проектирование, производство и установку изделий из натурального и искусственного камня. Работы выполняются опытными специалистами на новейшем оборудовании.</span>
+    <span class="en"><strong>Our company has been in the stone processing market for 15 years.</strong> During this time we have completed over 5,000 individual orders. We offer a full range of services — design, manufacturing and installation of natural and engineered stone products, carried out by experienced specialists.</span>
+    <span class="me"><strong>Naša kompanija djeluje na tržištu obrade kamena već 15 godina.</strong> U tom periodu izvršili smo preko 5.000 individualnih narudžbi. Nudimo kompletan paket usluga — projektovanje, proizvodnju i ugradnju proizvoda od prirodnog i vještačkog kamena.</span>
   </p>
 </section>
 
@@ -412,6 +419,15 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
-
+<script>
+function openCategory(filter) {
+  document.getElementById('gallery').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){
+    document.querySelectorAll('.gfbtn').forEach(function(btn){
+      if(btn.getAttribute('onclick').indexOf("'"+filter+"'") !== -1) btn.click();
+    });
+  }, 600);
+}
+</script>
 </body>
 </html>
