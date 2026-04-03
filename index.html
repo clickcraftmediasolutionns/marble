@@ -705,19 +705,13 @@ function setLang(l){
 var GF_PREVIEW = 10;
 
 /* Filter buttons */
-<script>
 function gf(btn,cat){
   document.querySelectorAll('.gfbtn').forEach(function(b){b.classList.remove('on');});
   btn.classList.add('on');
   document.querySelectorAll('.gi').forEach(function(item){
-    if(cat === 'all' || cat === 'fountain'){   // default is fountain
-      item.style.display = 'block';
-    } else {
-      item.style.display = (item.dataset.cat === cat) ? 'block' : 'none';
-    }
+    item.style.display = (cat === 'fountain' || item.dataset.cat === cat) ? 'block' : 'none';
   });
 }
-</script>
 
 /* Show all */
 function showAll() {
