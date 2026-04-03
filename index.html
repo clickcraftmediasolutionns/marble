@@ -197,16 +197,159 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
     <span class="me">Proizvodi od <em>prirodnog kamena</em></span>
   </h2>
   <div class="pgrid">
-    <div class="pcard" onclick="openCategory('counter')"><div class="pimg" style="background-image:url('kuhnja1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Кухня</span><span class="en">Kitchen</span><span class="me">Kuhinja</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('fireplace')"><div class="pimg" style="background-image:url('kam1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Камины</span><span class="en">Fireplaces</span><span class="me">Kamini</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('shk')"><div class="pimg" style="background-image:url('shk1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Лестницы</span><span class="en">Staircases</span><span class="me">Stepenice</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('floor')"><div class="pimg" style="background-image:url('pol1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Полы</span><span class="en">Floors</span><span class="me">Podovi</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('fountain')"><div class="pimg" style="background-image:url('fon1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Фонтаны</span><span class="en">Fountains</span><span class="me">Fontane</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('tisch')"><div class="pimg" style="background-image:url('tisch1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Столы</span><span class="en">Tables </span><span class="me">Stolovi </span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('toi')"><div class="pimg" style="background-image:url('toi1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Туалет</span><span class="en"> Toilette</span><span class="me">Toaleta</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('bar')"><div class="pimg" style="background-image:url('bar1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Барные стойки</span><span class="en"> Reception Bar</span><span class="me">Recepcijski bar</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
-    <div class="pcard" onclick="openCategory('pod')"><div class="pimg" style="background-image:url('pod1.jpg')"></div><div class="pinfo"><div class="pname"><span class="ru">Подоконники и фасады</span><span class="en"> Windowbank and outer</span><span class="me">Prozorske i fasade</span></div><div class="parrow"><span class="ru">Смотреть →</span><span class="en">View →</span><span class="me">Pogledaj →</span></div></div></div>
+  <!-- Kitchen - representative photo kuhnja1.jpg -->
+  <div class="pcard" onclick="openCategory('counter')">
+    <div class="pimg" style="background-image:url('kuhnja1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Кухня</span>
+        <span class="en">Kitchen</span>
+        <span class="me">Kuhinja</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
   </div>
+
+  <!-- Fireplaces -->
+  <div class="pcard" onclick="openCategory('fireplace')">
+    <div class="pimg" style="background-image:url('kam1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Камины</span>
+        <span class="en">Fireplaces</span>
+        <span class="me">Kamini</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stairs -->
+  <div class="pcard" onclick="openCategory('shk')">
+    <div class="pimg" style="background-image:url('shk1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Лестницы</span>
+        <span class="en">Staircases</span>
+        <span class="me">Stepenice</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floors -->
+  <div class="pcard" onclick="openCategory('floor')">
+    <div class="pimg" style="background-image:url('pol1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Полы</span>
+        <span class="en">Floors</span>
+        <span class="me">Podovi</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fountains -->
+  <div class="pcard" onclick="openCategory('fountain')">
+    <div class="pimg" style="background-image:url('fon1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Фонтаны</span>
+        <span class="en">Fountains</span>
+        <span class="me">Fontane</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tables -->
+  <div class="pcard" onclick="openCategory('tisch')">
+    <div class="pimg" style="background-image:url('tisch1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Столы</span>
+        <span class="en">Tables </span>
+        <span class="me">Stolovi </span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toilette -->
+  <div class="pcard" onclick="openCategory('toi')">
+    <div class="pimg" style="background-image:url('toi1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Туалет</span>
+        <span class="en"> Toilette</span>
+        <span class="me">Toaleta</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reception Bar -->
+  <div class="pcard" onclick="openCategory('bar')">
+    <div class="pimg" style="background-image:url('bar1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Барные стойки</span>
+        <span class="en"> Reception Bar</span>
+        <span class="me">Recepcijski bar</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Window bars and outer -->
+  <div class="pcard" onclick="openCategory('pod')">
+    <div class="pimg" style="background-image:url('pod1.jpg')"></div>
+    <div class="pinfo">
+      <div class="pname">
+        <span class="ru">Подоконники и фасады</span>
+        <span class="en"> Windowbank and outer</span>
+        <span class="me">Prozorske i fasade</span>
+      </div>
+      <div class="parrow">
+        <span class="ru">Смотреть →</span>
+        <span class="en">View →</span>
+        <span class="me">Pogledaj →</span>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
 <!-- SERVICES -->
