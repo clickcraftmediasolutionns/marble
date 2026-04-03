@@ -604,22 +604,19 @@ function setLang(l){
 var GF_PREVIEW = 10;
 
 /* Filter buttons */
-function gf(btn, cat) {
-  document.querySelectorAll('.gfbtn').forEach(function(b){ b.classList.remove('on'); });
+<script>
+function gf(btn,cat){
+  document.querySelectorAll('.gfbtn').forEach(function(b){b.classList.remove('on');});
   btn.classList.add('on');
-  var all = Array.from(document.querySelectorAll('.gi'));
-  all.forEach(function(el){ el.classList.remove('g-hidden', 'g-preview'); });
-  var w = document.getElementById('showmore-wrap');
-  if (cat === 'all') {
-    all.slice(GF_PREVIEW).forEach(function(el){ el.classList.add('g-preview'); });
-    if (w) w.style.display = all.length > GF_PREVIEW ? 'flex' : 'none';
-  } else {
-    all.forEach(function(el){
-      if (el.getAttribute('data-cat') !== cat) el.classList.add('g-hidden');
-    });
-    if (w) w.style.display = 'none';
-  }
+  document.querySelectorAll('.gi').forEach(function(item){
+    if(cat === 'all' || cat === 'fountain'){   // default is fountain
+      item.style.display = 'block';
+    } else {
+      item.style.display = (item.dataset.cat === cat) ? 'block' : 'none';
+    }
+  });
 }
+</script>
 
 /* Show all */
 function showAll() {
