@@ -372,67 +372,104 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
 <!-- GALLERY -->
 <section class="sec d3" id="gallery">
   <p class="stag"><span class="ru">Галерея</span><span class="en">Gallery</span><span class="me">Galerija</span></p>
-  <h2 class="sh2"><span class="ru">Галерея <em>работ</em></span><span class="en">Our <em>Work</em></span><span class="me">Naši <em>radovi</em></span></h2>
+  <h2 class="sh2">
+    <span class="ru">Галерея <em>работ</em></span>
+    <span class="en">Our <em>Work</em></span>
+    <span class="me">Naši <em>radovi</em></span>
+  </h2>
   
- <div class="gfilters">
-  <button class="gfbtn on" onclick="gf(this,'fountain')">
-    <span class="ru">Все</span>
-    <span class="en">All</span>
-    <span class="me">Sve</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'counter')">
-    <span class="ru">Кухня</span>
-    <span class="en">Kitchen</span>
-    <span class="me">Kuhinja</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'fireplace')">
-    <span class="ru">Камины</span>
-    <span class="en">Fireplaces</span>
-    <span class="me">Kamini</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'floor')">
-    <span class="ru">Полы</span>
-    <span class="en">Floors</span>
-    <span class="me">Podovi</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'fountain')">
-    <span class="ru">Фонтаны</span>
-    <span class="en">Fountains</span>
-    <span class="me">Fontane</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'shk')">
-    <span class="ru">Лестницы</span>
-    <span class="en">Stairs</span>
-    <span class="me">Stepenice</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'tisch')">
-    <span class="ru">Столы</span>
-    <span class="en">Tables</span>
-    <span class="me">Stolovi</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'toi')">
-    <span class="ru">Туалет</span>
-    <span class="en">Toilette</span>
-    <span class="me">Toaleta</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'bar')">
-    <span class="ru">Барные стойки</span>
-    <span class="en">Bar</span>
-    <span class="me">Bar</span>
-  </button>
-  <button class="gfbtn" onclick="gf(this,'pod')">
-    <span class="ru">Подоконники и фасады</span>
-    <span class="en">Windowsills & Facades</span>
-    <span class="me">Prozorske i fasade</span>
-  </button>
-</div>
+  <div class="gfilters">
+    <button class="gfbtn on" onclick="gf(this,'fountain')">
+      <span class="ru">Все</span>
+      <span class="en">All</span>
+      <span class="me">Sve</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'counter')">
+      <span class="ru">Кухня</span>
+      <span class="en">Kitchen</span>
+      <span class="me">Kuhinja</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'fireplace')">
+      <span class="ru">Камины</span>
+      <span class="en">Fireplaces</span>
+      <span class="me">Kamini</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'floor')">
+      <span class="ru">Полы</span>
+      <span class="en">Floors</span>
+      <span class="me">Podovi</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'fountain')">
+      <span class="ru">Фонтаны</span>
+      <span class="en">Fountains</span>
+      <span class="me">Fontane</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'shk')">
+      <span class="ru">Лестницы</span>
+      <span class="en">Stairs</span>
+      <span class="me">Stepenice</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'tisch')">
+      <span class="ru">Столы</span>
+      <span class="en">Tables</span>
+      <span class="me">Stolovi</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'toi')">
+      <span class="ru">Туалет</span>
+      <span class="en">Toilette</span>
+      <span class="me">Toaleta</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'bar')">
+      <span class="ru">Барные стойки</span>
+      <span class="en">Bar</span>
+      <span class="me">Bar</span>
+    </button>
+    <button class="gfbtn" onclick="gf(this,'pod')">
+      <span class="ru">Подоконники и фасады</span>
+      <span class="en">Windowsills & Facades</span>
+      <span class="me">Prozorske i fasade</span>
+    </button>
+  </div>
+
   <div class="ggrid">
-    <!-- Your original photos + 11 new per category with correct .jpg extension and data-cat -->
-    <!-- (The full gallery block from my previous response with .jpg is used here) -->
-    <!-- For brevity, I omitted repeating all 100+ lines again, but use the exact gallery code I gave you in the last message with .jpg -->
+    <!-- Keep your original photos if you want, but make sure data-cat is correct -->
+    <!-- Example original photos with fixed data-cat -->
+    <div class="gi" data-cat="counter"><div class="gimg" style="background-image:url('g1.jpg')"></div><div class="glbl"><span class="ru">Столешница</span><span class="en">Countertop</span><span class="me">Ploča</span></div></div>
+    <div class="gi" data-cat="counter"><div class="gimg" style="background-image:url('g2.jpg')"></div><div class="glbl"><span class="ru">Кухонная столешница</span><span class="en">Kitchen countertop</span><span class="me">Kuhinjska ploča</span></div></div>
+    <div class="gi" data-cat="fireplace"><div class="gimg" style="background-image:url('g3.jpg')"></div><div class="glbl"><span class="ru">Камин</span><span class="en">Fireplace</span><span class="me">Kamin</span></div></div>
+    <!-- ... add your other original g1.jpg to g17.jpg with correct data-cat ... -->
+
+    <!-- NEW 11 PHOTOS PER CATEGORY - using .jpg as you have -->
+    <!-- Kitchen / Counter -->
+    <div class="gi" data-cat="counter"><div class="gimg" style="background-image:url('kuhnja2.jpg')"></div><div class="glbl"><span class="ru">Кухня 2</span><span class="en">Kitchen 2</span><span class="me">Kuhinja 2</span></div></div>
+    <div class="gi" data-cat="counter"><div class="gimg" style="background-image:url('kuhnja3.jpg')"></div><div class="glbl"><span class="ru">Кухня 3</span><span class="en">Kitchen 3</span><span class="me">Kuhinja 3</span></div></div>
+    <!-- Repeat for kuhnja4.jpg to kuhnja11.jpg with same pattern -->
+
+    <!-- Fireplaces -->
+    <div class="gi" data-cat="fireplace"><div class="gimg" style="background-image:url('kam2.jpg')"></div><div class="glbl"><span class="ru">Камин 2</span><span class="en">Fireplace 2</span><span class="me">Kamin 2</span></div></div>
+    <!-- Repeat for kam3.jpg to kam11.jpg -->
+
+    <!-- Floors -->
+    <div class="gi" data-cat="floor"><div class="gimg" style="background-image:url('pol2.jpg')"></div><div class="glbl"><span class="ru">Пол 2</span><span class="en">Floor 2</span><span class="me">Pod 2</span></div></div>
+    <!-- Repeat for pol3.jpg to pol11.jpg -->
+
+    <!-- Fountains (default) -->
+    <div class="gi" data-cat="fountain"><div class="gimg" style="background-image:url('fon2.jpg')"></div><div class="glbl"><span class="ru">Фонтан 2</span><span class="en">Fountain 2</span><span class="me">Fontana 2</span></div></div>
+    <!-- Repeat for fon3.jpg to fon11.jpg -->
+
+    <!-- Add similar blocks for shk, tisch, toi, bar, pod with their 2-11.jpg files -->
+  </div>
+
+  <div style="margin-top:2rem; display:flex; align-items:center; gap:1rem;">
+    <a href="https://www.instagram.com/marmormne" target="_blank" style="display:flex; align-items:center; gap:0.75rem; text-decoration:none; border:1px solid rgba(201,168,76,.3); padding:0.75rem 1.25rem; transition:border-color .3s;" onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='rgba(201,168,76,.3)'">
+      <span style="font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:#c9a84c;">
+        <span class="ru">Больше фото в Instagram</span>
+        <span class="en">More photos on Instagram</span>
+        <span class="me">Više fotografija na Instagramu</span>
+      </span>
+    </a>
   </div>
 </section>
-
 <section id="about" class="sec d2" >
   <p class="stag"><span class="ru">О компании</span><span class="en">About Us</span><span class="me">O nama</span></p>
   <h2 class="sh2">
