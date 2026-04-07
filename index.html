@@ -530,47 +530,30 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
 
 <!-- CONTACT -->
 
-<form class="contact-form" id="marmorContactForm" novalidate>
+<div class="contact-section">
+  <p class="contact-eyebrow">Kontakt / Contact / Контакт</p>
+  <h2 class="contact-heading">Pišite nam.<br><em>Get in touch.</em></h2>
+  <p class="contact-sub">Slobodno nas kontaktirajte za ponude, katalog ili bilo kakva pitanja.<br>We'll get back to you within 24 hours.</p>
+  <div class="gold-divider"><span></span><i>◆</i><span></span></div>
 
-  <div class="field-wrap">
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Ime i prezime / Name and Surname / Имя и фамилия"
-      required
-      autocomplete="name"
-    />
-  </div>
+  <form class="contact-form" id="marmorContactForm" novalidate>
+    <div class="field-wrap">
+      <input type="text" id="name" name="name" placeholder="Ime i prezime / Name and Surname / Имя и фамилия" required autocomplete="name"/>
+    </div>
+    <div class="field-wrap">
+      <input type="text" id="contact_info" name="contact_info" placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail" required autocomplete="email"/>
+    </div>
+    <div class="field-wrap">
+      <textarea id="message" name="message" placeholder="Vaša poruka / Your message / Ваше сообщение" required></textarea>
+    </div>
+    <div class="form-status" id="formStatus"></div>
+    <button type="submit" class="submit-btn" id="submitBtn">
+      <span>Pošaljite / Send</span>
+    </button>
+  </form>
+</div>
 
-  <div class="field-wrap">
-    <input
-      type="text"
-      id="contact_info"
-      name="contact_info"
-      placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail"
-      required
-      autocomplete="email"
-    />
-  </div>
-
-  <div class="field-wrap">
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Vaša poruka / Your message / Ваше сообщение"
-      required
-    ></textarea>
-  </div>
-
-  <div class="form-status" id="formStatus"></div>
-
-  <button type="submit" class="submit-btn" id="submitBtn">
-    <span>Pošaljite / Send</span>
-  </button>
-
-</form>
-
+<!-- Footer -->
 
 <footer>
   <span class="fcopy"><span class="ru">© 2007–2026 Mramor MNE. Все права защищены.</span><span class="en">© 2007–2026 Mramor MNE. All rights reserved.</span><span class="me">© 2007–2026 Mramor MNE. Sva prava zadržana.</span></span>
