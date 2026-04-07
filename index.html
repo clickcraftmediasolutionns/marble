@@ -684,6 +684,7 @@ document.addEventListener('DOMContentLoaded', function(){
 .lbox-wrap.open { display:flex !important; }
 #showmore-wrap { display:none; text-align:center; margin-top:2rem; justify-content:center; }
 </style>
+
 <script>
   const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
   const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
@@ -697,7 +698,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
-
     const name        = document.getElementById('name').value.trim();
     const contactInfo = document.getElementById('contact_info').value.trim();
     const message     = document.getElementById('message').value.trim();
@@ -717,10 +717,8 @@ document.addEventListener('DOMContentLoaded', function(){
         message:      message,
         reply_to:     contactInfo.includes('@') ? contactInfo : '',
       });
-
       showStatus('✓  Poruka je poslata. Hvala! / Message sent. Thank you!', 'success');
       form.reset();
-
     } catch (error) {
       showStatus('Greška pri slanju. Pokušajte ponovo. / Error sending. Please try again.', 'error');
     } finally {
@@ -736,6 +734,7 @@ document.addEventListener('DOMContentLoaded', function(){
     setTimeout(() => { statusEl.style.display = 'none'; }, 6000);
   }
 </script>
+
 
 </body>
 </html>
