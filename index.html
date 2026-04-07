@@ -680,6 +680,58 @@ document.addEventListener('DOMContentLoaded', function(){
 .lbox-wrap.open { display:flex !important; }
 #showmore-wrap { display:none; text-align:center; margin-top:2rem; justify-content:center; }
 </style>
+<script>
+  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  const form      = document.getElementById('marmorContactForm');
+  const statusEl  = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name        = document.getElementById('name').value.trim();
+    const contactInfo = document.getElementById('contact_info').value.trim();
+    const message     = document.getElementById('message').value.trim();
+
+    if (!name || !contactInfo || !message) {
+      showStatus('Molimo popunite sva polja. / Please fill in all fields.', 'error');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.querySelector('span').textContent = 'Šaljemo...';
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name:    name,
+        contact_info: contactInfo,
+        message:      message,
+        reply_to:     contactInfo.includes('@') ? contactInfo : '',
+      });
+
+      showStatus('✓  Poruka je poslata. Hvala! / Message sent. Thank you!', 'success');
+      form.reset();
+
+    } catch (error) {
+      showStatus('Greška pri slanju. Pokušajte ponovo. / Error sending. Please try again.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.querySelector('span').textContent = 'Pošaljite / Send';
+    }
+  });
+
+  function showStatus(msg, type) {
+    statusEl.className = 'form-status ' + type;
+    statusEl.textContent = msg;
+    statusEl.style.display = 'block';
+    setTimeout(() => { statusEl.style.display = 'none'; }, 6000);
+  }
+</script>
 
 </body>
 </html>
