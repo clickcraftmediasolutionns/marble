@@ -509,41 +509,47 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
 
 <!-- CONTACT -->
 
-<section class="sec d2" id="contact">
-  <p class="stag"><span class="ru">Контакты</span><span class="en">Contact</span><span class="me">Kontakt</span></p>
-  <h2 class="sh2">
-    <span class="ru">Свяжитесь <em>с нами</em></span>
-    <span class="en">Get in <em>Touch</em></span>
-    <span class="me">Kontaktirajte <em>nas</em></span>
-  </h2>
-  <div class="cwrap">
-    <div>
-      <div class="cblock">
-        <div class="clbl"><span class="ru">Адрес</span><span class="en">Address</span><span class="me">Adresa</span></div>
-        <div class="cval"><span class="ru">Черногория, Подгорица<br>Princeze Ksenije 91, 81101</span><span class="en">Montenegro, Podgorica<br>Princeze Ksenije 91, 81101</span><span class="me">Crna Gora, Podgorica<br>Princeze Ksenije 91, 81101</span></div>
-      </div>
-      <div class="cblock">
-        <div class="clbl"><span class="ru">Телефон</span><span class="en">Phone</span><span class="me">Telefon</span></div>
-        <div class="cval"><a href="tel:+38267041706" style="color:var(--gold)">+382 67 041 706</a></div>
-      </div>
-      <div class="cblock">
-        <div class="clbl">Instagram</div>
-        <div class="cval"><a href="https://www.instagram.com/mramormne?igsh=MW1zcjc4dG1peHIzbw%3D%3D&utm_source=qr" target="_blank" style="color:var(--gold);">@mramormne</a></div>
-      </div>
-      <div class="cblock">
-        <div class="clbl"><span class="ru">Время работы</span><span class="en">Working hours</span><span class="me">Radno vrijeme</span></div>
-        <div class="cval"><span class="ru">09:00 – 18:00 · Воскресенье - выходной.</span><span class="en">09:00 – 18:00 · Sundays off</span><span class="me">09:00 – 18:00 · Nedjeljom slobodno</span></div>
-      </div>
-    </div>
-    <div>
-      <p class="stag" style="margin-bottom:1.5rem"><span class="ru">Обратный звонок</span><span class="en">Request a callback</span><span class="me">Povratni poziv</span></p>
-      <input id="fn" type="text" class="fi">
-      <input id="ft" type="tel" class="fi">
-      <textarea id="fm" class="fi" rows="4" style="resize:vertical"></textarea>
-      <button class="fsub"><span class="ru">Отправить запрос</span><span class="en">Send enquiry</span><span class="me">Pošalji upit</span></button>
-    </div>
+<form class="contact-form" id="marmorContactForm" novalidate>
+
+  <div class="field-wrap">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ime i prezime / Name and Surname / Имя и фамилия"
+      required
+      autocomplete="name"
+    />
   </div>
-</section>
+
+  <div class="field-wrap">
+    <input
+      type="text"
+      id="contact_info"
+      name="contact_info"
+      placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail"
+      required
+      autocomplete="email"
+    />
+  </div>
+
+  <div class="field-wrap">
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Vaša poruka / Your message / Ваше сообщение"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-status" id="formStatus"></div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    <span>Pošaljite / Send</span>
+  </button>
+
+</form>
+
 
 <footer>
   <span class="fcopy"><span class="ru">© 2007–2026 Mramor MNE. Все права защищены.</span><span class="en">© 2007–2026 Mramor MNE. All rights reserved.</span><span class="me">© 2007–2026 Mramor MNE. Sva prava zadržana.</span></span>
