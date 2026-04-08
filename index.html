@@ -58,6 +58,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <title>Mramor MNE — Izrada od prirodnog kamena | Podgorica</title>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -185,6 +186,28 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
 #lbox-img { max-width:92vw; max-height:88vh; object-fit:contain; border:1px solid rgba(201,168,76,.18); }
 #lbox-close { position:absolute; top:1rem; right:1.4rem; font-size:2.2rem; color:#c9a84c; cursor:pointer; opacity:.8; background:none; border:none; }
 #lbox-cap { position:absolute; bottom:1.4rem; left:50%; transform:translateX(-50%); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:#d8d0bc; white-space:nowrap; }
+
+.cwrap { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+.cblock { margin-bottom:0; padding-bottom:2rem; border-bottom:1px solid rgba(201,168,76,.15); }
+.cblock:last-child { border:none; padding-bottom:0; }
+.clbl { font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem; }
+.cval { font-size:1rem; color:var(--cream); line-height:1.7; }
+.cval a { color:var(--gold); text-decoration:none; }
+.cval a:hover { color:var(--gold2); }
+.fi { width:100%; padding:.85rem 1rem; margin-bottom:.75rem; background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.2); color:var(--cream); font-family:inherit; font-size:13px; outline:none; transition:border-color .3s; display:block; }
+.fi:focus { border-color:var(--gold); }
+.fi::placeholder { color:rgba(200,190,170,.35); font-style:normal; }
+textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
+.fsub { width:100%; padding:.9rem; border:1px solid var(--gold); color:var(--gold); font-size:11px; letter-spacing:.25em; text-transform:uppercase; transition:all .3s; background:transparent; cursor:pointer; font-family:inherit; display:block; }
+.fsub:hover { background:var(--gold); color:var(--dark); }
+.fsub:disabled { opacity:.5; pointer-events:none; }
+.fform-label { font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:1.2rem; display:block; }
+.fstatus { display:none; padding:.75rem 1rem; margin-bottom:.75rem; font-size:12px; border:1px solid; }
+.fstatus.ok  { display:block; border-color:rgba(201,168,76,.4); background:rgba(201,168,76,.06); color:var(--gold2); }
+.fstatus.err { display:block; border-color:rgba(220,80,60,.3); background:rgba(220,80,60,.05); color:#e8a090; }
+@media(max-width:768px){
+  .cwrap { grid-template-columns:1fr; gap:2rem; }
+}
 </style>
 
 </head>
@@ -530,28 +553,91 @@ footer { padding:1.2rem; flex-direction:column; text-align:center; }
 
 <!-- CONTACT -->
 
-<div class="contact-section">
-  <p class="contact-eyebrow">Kontakt / Contact / Контакт</p>
-  <h2 class="contact-heading">Pišite nam.<br><em>Get in touch.</em></h2>
-  <p class="contact-sub">Slobodno nas kontaktirajte za ponude, katalog ili bilo kakva pitanja.<br>We'll get back to you within 24 hours.</p>
-  <div class="gold-divider"><span></span><i>◆</i><span></span></div>
+<section id="contact" class="sec d2">
+  <p class="stag">
+    <span class="ru">Контакты</span>
+    <span class="en">Contact</span>
+    <span class="me">Kontakt</span>
+  </p>
+  <h2 class="sh2">
+    <span class="ru">Свяжитесь с <em>нами</em></span>
+    <span class="en">Contact <em>us</em></span>
+    <span class="me">Kontaktirajte <em>nas</em></span>
+  </h2>
 
-  <form class="contact-form" id="marmorContactForm" novalidate>
-    <div class="field-wrap">
-      <input type="text" id="name" name="name" placeholder="Ime i prezime / Name and Surname / Имя и фамилия" required autocomplete="name"/>
+  <div class="cwrap">
+
+    <div>
+      <div class="cblock">
+        <p class="clbl">
+          <span class="ru">Адрес</span>
+          <span class="en">Address</span>
+          <span class="me">Adresa</span>
+        </p>
+        <p class="cval">
+          Crna Gora, Podgorica<br>
+          Princeze Ksenije 91, 81101
+        </p>
+      </div>
+
+      <div class="cblock">
+        <p class="clbl">
+          <span class="ru">Телефон</span>
+          <span class="en">Phone</span>
+          <span class="me">Telefon</span>
+        </p>
+        <p class="cval">
+          <a href="tel:+38267041706">+382 67 041 706</a>
+        </p>
+      </div>
+
+      <div class="cblock">
+        <p class="clbl">Instagram</p>
+        <p class="cval">
+          <a href="https://instagram.com/marmormne" target="_blank">@marmormne</a>
+        </p>
+      </div>
+
+      <div class="cblock">
+        <p class="clbl">
+          <span class="ru">Рабочие часы</span>
+          <span class="en">Working hours</span>
+          <span class="me">Radno vrijeme</span>
+        </p>
+        <p class="cval">
+          <span class="ru">09:00 – 18:00 · Воскресенье выходной</span>
+          <span class="en">09:00 – 18:00 · Sundays off</span>
+          <span class="me">09:00 – 18:00 · Nedjeljom slobodno</span>
+        </p>
+      </div>
     </div>
-    <div class="field-wrap">
-      <input type="text" id="contact_info" name="contact_info" placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail" required autocomplete="email"/>
+
+    <div>
+      <span class="fform-label">
+        <span class="ru">Обратный звонок</span>
+        <span class="en">Send a message</span>
+        <span class="me">Povratni poziv</span>
+      </span>
+
+      <div class="fstatus" id="fstatus"></div>
+
+      <form id="contactForm" novalidate>
+        <input class="fi" type="text" id="fname" name="name" required
+          placeholder="Ime i prezime / Name and Surname / Имя и фамилия"/>
+        <input class="fi" type="text" id="fcontact" name="contact_info" required
+          placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail"/>
+        <textarea class="fi" id="fmessage" name="message" required
+          placeholder="Vaša poruka / Your message / Ваше сообщение"></textarea>
+        <button type="submit" class="fsub" id="fsubmit">
+          <span class="ru">Отправить запрос</span>
+          <span class="en">Send inquiry</span>
+          <span class="me">Pošalji upit</span>
+        </button>
+      </form>
     </div>
-    <div class="field-wrap">
-      <textarea id="message" name="message" placeholder="Vaša poruka / Your message / Ваше сообщение" required></textarea>
-    </div>
-    <div class="form-status" id="formStatus"></div>
-    <button type="submit" class="submit-btn" id="submitBtn">
-      <span>Pošaljite / Send</span>
-    </button>
-  </form>
-</div>
+
+  </div>
+</section>
 
 <!-- Footer -->
 
