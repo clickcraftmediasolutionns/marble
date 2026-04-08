@@ -772,55 +772,49 @@ document.addEventListener('DOMContentLoaded', function(){
 </style>
 
 <script>
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EJS_KEY      = 'YOUR_PUBLIC_KEY';
+  const EJS_SERVICE  = 'YOUR_SERVICE_ID';
+  const EJS_TEMPLATE = 'YOUR_TEMPLATE_ID';
 
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  emailjs.init({ publicKey: EJS_KEY });
 
-  const form      = document.getElementById('marmorContactForm');
-  const statusEl  = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitBtn');
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('fstatus');
+  const btn    = document.getElementById('fsubmit');
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const name        = document.getElementById('name').value.trim();
-    const contactInfo = document.getElementById('contact_info').value.trim();
-    const message     = document.getElementById('message').value.trim();
+    const name    = document.getElementById('fname').value.trim();
+    const contact = document.getElementById('fcontact').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
 
-    if (!name || !contactInfo || !message) {
-      showStatus('Molimo popunite sva polja. / Please fill in all fields.', 'error');
+    if (!name || !contact || !message) {
+      showStatus('Molimo popunite sva polja. / Please fill in all fields.', 'err');
       return;
     }
-
-    submitBtn.disabled = true;
-    submitBtn.querySelector('span').textContent = 'Šaljemo...';
-
+    btn.disabled = true;
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      await emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
         from_name:    name,
-        contact_info: contactInfo,
+        contact_info: contact,
         message:      message,
-        reply_to:     contactInfo.includes('@') ? contactInfo : '',
+        to_email:     'sales@mramormne.com',
+        reply_to:     contact.includes('@') ? contact : '',
       });
-      showStatus('✓  Poruka je poslata. Hvala! / Message sent. Thank you!', 'success');
+      showStatus('✓ Poruka poslata! / Message sent! / Сообщение отправлено!', 'ok');
       form.reset();
-    } catch (error) {
-      showStatus('Greška pri slanju. Pokušajte ponovo. / Error sending. Please try again.', 'error');
+    } catch(err) {
+      showStatus('Greška. Pozovite nas direktno. / Error. Please call us.', 'err');
     } finally {
-      submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = 'Pošaljite / Send';
+      btn.disabled = false;
     }
   });
 
-  function showStatus(msg, type) {
-    statusEl.className = 'form-status ' + type;
-    statusEl.textContent = msg;
-    statusEl.style.display = 'block';
-    setTimeout(() => { statusEl.style.display = 'none'; }, 6000);
+  function showStatus(msg, cls) {
+    status.className = 'fstatus ' + cls;
+    status.textContent = msg;
+    setTimeout(() => { status.className = 'fstatus'; }, 7000);
   }
 </script>
-
-
 </body>
 </html>
