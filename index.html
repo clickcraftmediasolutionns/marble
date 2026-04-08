@@ -622,12 +622,23 @@ textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
       <div class="fstatus" id="fstatus"></div>
 
       <form id="contactForm" novalidate>
-        <input class="fi" type="text" id="fname" name="name" required
-          placeholder="Ime i prezime / Name and Surname / Имя и фамилия"/>
-        <input class="fi" type="text" id="fcontact" name="contact_info" required
-          placeholder="Telefon ili e-mail / Phone or Email / Телефон или e-mail"/>
-        <textarea class="fi" id="fmessage" name="message" required
-          placeholder="Vaša poruka / Your message / Ваше сообщение"></textarea>
+       <input class="fi" type="text" id="fname" name="name" required
+       data-ph-me="Ime i prezime"
+      data-ph-en="Name and Surname"
+      data-ph-ru="Имя и фамилия"
+      placeholder="Ime i prezime"/>
+
+      <input class="fi" type="text" id="fcontact" name="contact_info" required
+      data-ph-me="Telefon ili e-mail"
+      data-ph-en="Phone or Email"
+      data-ph-ru="Телефон или e-mail"
+      placeholder="Telefon ili e-mail"/>
+
+      <textarea class="fi" id="fmessage" name="message" required
+      data-ph-me="Vaša poruka"
+      data-ph-en="Your message"
+      data-ph-ru="Ваше сообщение"
+      placeholder="Vaša poruka"></textarea>
         <button type="submit" class="fsub" id="fsubmit">
           <span class="ru">Отправить запрос</span>
           <span class="en">Send inquiry</span>
@@ -815,6 +826,15 @@ document.addEventListener('DOMContentLoaded', function(){
     status.textContent = msg;
     setTimeout(() => { status.className = 'fstatus'; }, 7000);
   }
+
+  // Update form placeholders when language changes
+const origSetLang = window.setLang;
+window.setLang = function(lang) {
+  if (origSetLang) origSetLang(lang);
+  document.querySelectorAll('[data-ph-' + lang + ']').forEach(el => {
+    el.placeholder = el.getAttribute('data-ph-' + lang);
+  });
+};
 </script>
 </body>
 </html>
