@@ -828,13 +828,27 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Update form placeholders when language changes
-const origSetLang = window.setLang;
-window.setLang = function(lang) {
-  if (origSetLang) origSetLang(lang);
+function updatePlaceholders(lang) {
   document.querySelectorAll('[data-ph-' + lang + ']').forEach(el => {
     el.placeholder = el.getAttribute('data-ph-' + lang);
   });
-};
+}
+
+// Hook into the language buttons directly
+document.querySelectorAll('.lbtn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const lang = this.textContent.trim() === 'РУС' ? 'ru'
+               : this.textContent.trim() === 'ENG' ? 'en'
+               : 'me';
+    updatePlaceholders(lang);
+  });
+});
+
+// Set correct placeholders on page load based on active language
+const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
+                 : document.body.classList.contains('lang-en') ? 'en'
+                 : 'me';
+updatePlaceholders(activeLang);
 </script>
 </body>
 </html>
