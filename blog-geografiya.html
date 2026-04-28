@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Изделия из натурального камня по всей Черногории | Mramor MNE</title>
+<meta name="description" content="Mramor MNE выполняет полный цикл работ с натуральным камнем в Подгорице, Будве, Которе, Тивате, Херцег-Нови, Баре и по всей Черногории. Замер, изготовление, монтаж.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#c9a84c;--gold2:#e8c97a;--dark:#111009;--dark2:#1c1a15;--dark3:#262319;--cream:#f0ead8;--cream2:#d8d0bc;--muted:#9a9080;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat','Helvetica Neue',Arial,sans-serif;--max:780px}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--dark);color:var(--cream);font-size:15px;line-height:1.7;overflow-x:hidden}a{text-decoration:none;color:inherit}
+#lb{position:fixed;top:0;left:0;right:0;z-index:200;height:40px;background:#c9a84c;display:flex;align-items:center;justify-content:flex-end;padding:0 2rem;gap:.2rem}
+.lbtn{color:rgba(0,0,0,.5);font-size:11px;letter-spacing:.15em;font-weight:700;padding:4px 10px;border-bottom:2px solid transparent;transition:all .2s;background:none;border:none;cursor:pointer}.lbtn:hover{color:#000}.lbtn.on{color:#000;border-bottom-color:#000}.lsep{color:rgba(0,0,0,.25);font-size:10px}
+#nav{position:fixed;top:40px;left:0;right:0;z-index:199;height:64px;background:rgba(17,16,9,.97);border-bottom:1px solid rgba(201,168,76,.12);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.logo{font-family:var(--sans);font-size:1.35rem;letter-spacing:.25em;color:var(--cream)}.logo span{color:var(--gold)}.nav-back{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--cream2);transition:color .2s;display:flex;align-items:center;gap:.5rem}.nav-back:hover{color:var(--gold)}
+.ru,.en,.me{display:none}body.lang-ru .ru{display:inline}body.lang-en .en{display:inline}body.lang-me .me{display:inline}
+.ru-block,.en-block,.me-block{display:none}body.lang-ru .ru-block{display:block}body.lang-en .en-block{display:block}body.lang-me .me-block{display:block}
+.blog-hero{margin-top:104px;padding:4rem 2.5rem 3rem;background:var(--dark2);border-bottom:1px solid rgba(201,168,76,.1)}.blog-hero-inner{max-width:var(--max);margin:0 auto}
+.blog-tag{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.blog-h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:300;line-height:1.15;color:var(--cream);margin-bottom:1.5rem}.blog-h1 em{font-style:italic;color:var(--gold2)}
+.blog-meta{font-size:11px;letter-spacing:.1em;color:var(--muted);display:flex;gap:1.5rem;flex-wrap:wrap}.blog-meta span::before{content:'· ';margin-right:.3rem}.blog-meta span:first-child::before{content:''}
+.lead-box{background:rgba(201,168,76,.06);border-left:3px solid var(--gold);padding:1.5rem 1.8rem;margin:2.5rem 0;border-radius:0 4px 4px 0}.lead-box p{font-size:.95rem;color:var(--cream);line-height:1.8;font-style:italic}
+.blog-body{max-width:var(--max);margin:0 auto;padding:3rem 2.5rem 5rem}
+.blog-body h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:400;color:var(--cream);margin:3rem 0 1rem;line-height:1.25}.blog-body h2 em{font-style:italic;color:var(--gold2)}
+.blog-body h3{font-family:var(--sans);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:2rem 0 .8rem}
+.blog-body p{color:var(--cream2);font-size:.93rem;line-height:1.85;margin-bottom:1.2rem}.blog-body strong{color:var(--cream)}
+.aeo-box{background:var(--dark3);border:1px solid rgba(201,168,76,.2);padding:1.4rem 1.8rem;margin:1rem 0 2rem;border-radius:2px}.aeo-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}.aeo-box p{font-size:.92rem;color:var(--cream);line-height:1.75;margin:0}
+.blog-body ul{margin:1rem 0 1.5rem;padding-left:0;list-style:none}
+.blog-body ul li{position:relative;padding-left:1.5rem;color:var(--cream2);font-size:.92rem;line-height:1.8;margin-bottom:.4rem}
+.blog-body ul li::before{content:'—';position:absolute;left:0;color:var(--gold);opacity:.7}
+.blog-table-wrap{overflow-x:auto;margin:2rem 0}.blog-table{width:100%;border-collapse:collapse}
+.blog-table th{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);padding:.8rem 1rem;text-align:left;border-bottom:1px solid rgba(201,168,76,.25)}
+.blog-table td{padding:.9rem 1rem;font-size:.88rem;color:var(--cream2);border-bottom:1px solid rgba(255,255,255,.04);line-height:1.65;vertical-align:top}
+.blog-table td:first-child{color:var(--gold2);font-weight:600;white-space:nowrap}.blog-table tr:hover td{background:rgba(201,168,76,.03)}
+.expert-box{display:flex;gap:1.5rem;align-items:flex-start;background:rgba(255,255,255,.02);border:1px solid rgba(201,168,76,.15);padding:1.8rem;margin:2.5rem 0;border-radius:2px}
+.expert-avatar{width:60px;height:60px;border-radius:50%;background:var(--dark3);border:2px solid rgba(201,168,76,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.expert-content blockquote{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.7;margin-bottom:.6rem}
+.expert-content blockquote::before{content:'"';color:var(--gold);font-size:1.4rem;line-height:0;vertical-align:-.2em;margin-right:.1rem}
+.expert-content blockquote::after{content:'"';color:var(--gold);font-size:1.4rem;line-height:0;vertical-align:-.2em;margin-left:.1rem}
+.expert-name{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.expert-role{font-size:10px;color:var(--muted);margin-top:.2rem}
+.geo-grid{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
+.geo-tag{padding:.4rem 1rem;border:1px solid rgba(201,168,76,.2);font-size:11px;letter-spacing:.1em;color:var(--cream2);border-radius:2px}
+.internal-links{background:var(--dark2);border:1px solid rgba(201,168,76,.12);padding:1.8rem;margin:2.5rem 0;border-radius:2px}
+.internal-links-title{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.internal-links ul{list-style:none;padding:0;margin:0}.internal-links ul li{margin-bottom:.5rem}
+.internal-links ul li a{font-size:.88rem;color:var(--cream2);display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.internal-links ul li a:hover{color:var(--gold)}.internal-links ul li a::before{content:'→';color:var(--gold);font-size:.8rem}
+.blog-cta{text-align:center;padding:3rem 2rem;background:var(--dark3);border-top:1px solid rgba(201,168,76,.1);margin-top:3rem}
+.blog-cta h3{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--cream);margin-bottom:.8rem}
+.blog-cta p{color:var(--muted);font-size:.88rem;margin-bottom:1.8rem}
+.cta-btn{display:inline-block;padding:.85rem 2.5rem;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.25em;text-transform:uppercase;transition:all .3s}.cta-btn:hover{background:var(--gold);color:var(--dark)}
+.gold-rule{display:flex;align-items:center;gap:1rem;margin:2.5rem 0}.gold-rule span{display:block;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.3),transparent);flex:1}.gold-rule i{color:var(--gold);font-size:.5rem;letter-spacing:.3em;font-style:normal}
+@media(max-width:768px){#nav{padding:0 1.2rem}.blog-hero{padding:3rem 1.2rem 2rem}.blog-body{padding:2rem 1.2rem 4rem}.expert-box{flex-direction:column;gap:1rem}}
+</style>
+</head>
+<body class="lang-ru">
+<div id="lb"><button class="lbtn on" onclick="setLang('ru',this)">РУС</button><span class="lsep">|</span><button class="lbtn" onclick="setLang('en',this)">ENG</button><span class="lsep">|</span><button class="lbtn" onclick="setLang('me',this)">MNE</button></div>
+<nav id="nav">
+  <a href="index.html" class="logo">MRAMOR <span>MNE</span></a>
+  <a href="blog.html" class="nav-back">← <span class="ru">Все статьи</span><span class="en">All articles</span><span class="me">Svi članci</span></a>
+</nav>
+
+<header class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="blog-tag"><span class="ru">География · Черногория</span><span class="en">Geography · Montenegro</span><span class="me">Geografija · Crna Gora</span></span>
+    <h1 class="blog-h1">
+      <span class="ru">Натуральный камень в Черногории:<br><em>работаем в каждом городе страны</em></span>
+      <span class="en">Natural stone in Montenegro:<br><em>we work in every city in the country</em></span>
+      <span class="me">Prirodni kamen u Crnoj Gori:<br><em>radimo u svakom gradu zemlje</em></span>
+    </h1>
+    <div class="blog-meta"><span>Mramor MNE</span><span>2025</span><span><span class="ru">8 мин чтения</span><span class="en">8 min read</span><span class="me">8 min čitanja</span></span></div>
+  </div>
+</header>
+
+<article class="blog-body">
+
+  <div class="lead-box">
+    <p class="ru-block">Mramor MNE обеспечивает полный цикл работ с натуральным камнем по всей Черногории: от первого замера до финального монтажа. Мы работаем в Подгорице, Будве, Которе, Тивате, Херцег-Нови, Баре, Улцине, Никшиче, Колашине, Жабляке и всех других городах страны с 2010 года.</p>
+    <p class="en-block">Mramor MNE provides a full cycle of natural stone work throughout Montenegro: from the first measurement to the final installation. We work in Podgorica, Budva, Kotor, Tivat, Herceg Novi, Bar, Ulcinj, Nikšić, Kolašin, Žabljak and all other cities in the country since 2010.</p>
+    <p class="me-block">Mramor MNE obezbjeđuje puni ciklus rada s prirodnim kamenom širom Crne Gore: od prvog mjerenja do finalne montaže. Radimo u Podgorici, Budvi, Kotoru, Tivtu, Herceg Novom, Baru, Ulcinju, Nikšiću, Kolašinu, Žabljaku i svim ostalim gradovima zemlje od 2010. godine.</p>
+  </div>
+
+  <h2 class="ru">Где в Черногории можно заказать изделия из натурального камня?</h2>
+  <h2 class="en">Where in Montenegro can you order natural stone products?</h2>
+  <h2 class="me">Gdje u Crnoj Gori možete naručiti predmete od prirodnog kamena?</h2>
+
+  <div class="aeo-box">
+    <span class="aeo-label"><span class="ru">Краткий ответ</span><span class="en">Quick answer</span><span class="me">Kratak odgovor</span></span>
+    <p class="ru-block">Mramor MNE выполняет заказы по всей Черногории. Полный цикл — замер, изготовление на собственном производстве, доставка и монтаж — доступен в любом городе страны: от столицы Подгорицы до горных курортов Колашина и Жабляка.</p>
+    <p class="en-block">Mramor MNE fulfils orders throughout Montenegro. The full cycle — measurement, production at our own facility, delivery and installation — is available in any city in the country: from the capital Podgorica to the mountain resorts of Kolašin and Žabljak.</p>
+    <p class="me-block">Mramor MNE izvršava narudžbe širom Crne Gore. Puni ciklus — mjerenje, izrada u sopstvenoj proizvodnji, dostava i montaža — dostupan je u bilo kom gradu: od prijestonice Podgorice do planinskih odmarališta Kolašina i Žabljaka.</p>
+  </div>
+
+  <div class="geo-grid">
+    <span class="geo-tag">Podgorica</span><span class="geo-tag">Budva</span><span class="geo-tag">Kotor</span>
+    <span class="geo-tag">Tivat</span><span class="geo-tag">Herceg Novi</span><span class="geo-tag">Bar</span>
+    <span class="geo-tag">Ulcinj</span><span class="geo-tag">Nikšić</span><span class="geo-tag">Bijelo Polje</span>
+    <span class="geo-tag">Pljevlja</span><span class="geo-tag">Berane</span><span class="geo-tag">Cetinje</span>
+    <span class="geo-tag">Danilovgrad</span><span class="geo-tag">Kolašin</span><span class="geo-tag">Žabljak</span>
+    <span class="geo-tag">Porto Montenegro</span>
+  </div>
+
+  <div class="gold-rule"><span></span><i>✦</i><span></span></div>
+
+  <h2 class="ru">Подгорица и центральный регион</h2>
+  <h2 class="en">Podgorica and the central region</h2>
+  <h2 class="me">Podgorica i centralna regija</h2>
+
+  <p class="ru-block">Подгорица — наш основной рынок. Здесь сосредоточено большинство жилых новостроек, офисных центров и частных вилл, в которых мы работаем. Мы выполняем полный спектр услуг: от изготовления столешниц и умывальников до облицовки фасадов и монтажа каминов. В соседнем Даниловграде и Цетине также доступен полный цикл.</p>
+  <p class="en-block">Podgorica is our main market. Most of the residential new-builds, office centres and private villas we work in are located here. We provide the full range of services: from worktops and sinks to facade cladding and fireplace installation. In neighbouring Danilovgrad and Cetinje the full cycle is also available.</p>
+  <p class="me-block">Podgorica je naše glavno tržište. Ovdje je koncentrisana većina stambenih novogradnji, poslovnih centara i privatnih vila u kojima radimo. Pružamo puni spektar usluga: od radnih ploča i umivaonika do obloge fasada i montaže kamina. U susjednom Danilovgradu i Cetinju takođe je dostupan puni ciklus.</p>
+
+  <div class="gold-rule"><span></span><i>✦</i><span></span></div>
+
+  <h2 class="ru">Будва, Котор, Тиват — <em>элитный сегмент Адриатики</em></h2>
+  <h2 class="en">Budva, Kotor, Tivat — <em>the elite Adriatic segment</em></h2>
+  <h2 class="me">Budva, Kotor, Tivat — <em>elitni jadranski segment</em></h2>
+
+  <p class="ru-block">Черногорское побережье — зона особого спроса на элитные изделия из натурального камня. Виллы, апартаменты и отели Будвы, Котора и Тивата задают высокую планку: здесь используется мрамор Calacatta, оникс с подсветкой, раскладки bookmatch и гранитные фасады. Mramor MNE реализовывает проекты в <strong>Porto Montenegro</strong> и на самых престижных объектах Адриатического побережья.</p>
+  <p class="en-block">The Montenegrin coast is an area of exceptional demand for elite natural stone products. Villas, apartments and hotels in Budva, Kotor and Tivat set a high standard: Calacatta marble, backlit onyx, bookmatch layouts and granite facades are all used here. Mramor MNE delivers projects in <strong>Porto Montenegro</strong> and at the most prestigious locations on the Adriatic coast.</p>
+  <p class="me-block">Crnogorska obala je zona posebne potražnje za elitnim predmetima od prirodnog kamena. Vile, apartmani i hoteli Budve, Kotora i Tivta postavljaju visoke standarde: ovdje se koristi mermer Calacatta, oniks s pozadinskim osvjetljenjem, bookmatch rasporedi i granitne fasade. Mramor MNE realizuje projekte u <strong>Porto Montenegru</strong> i na najprestižnijim objektima Jadranskog primorja.</p>
+
+  <h3><span class="ru">Популярные проекты на побережье:</span><span class="en">Popular coastal projects:</span><span class="me">Popularni priobalni projekti:</span></h3>
+  <ul>
+    <li><span class="ru">Облицовка вилл и апартаментов — мрамор и гранит</span><span class="en">Villa and apartment cladding — marble and granite</span><span class="me">Obloga vila i apartmana — mermer i granit</span></li>
+    <li><span class="ru">Ониксовые барные стойки для отелей и ресторанов</span><span class="en">Onyx bar counters for hotels and restaurants</span><span class="me">Oniks šankovi za hotele i restorane</span></li>
+    <li><span class="ru">Мраморные лестницы и полы в лобби</span><span class="en">Marble staircases and lobby floors</span><span class="me">Mermerne stepenice i podovi u lobiju</span></li>
+    <li><span class="ru">Гранитные фасады устойчивые к морскому климату</span><span class="en">Granite facades resistant to the maritime climate</span><span class="me">Granitne fasade otporne na morsku klimu</span></li>
+  </ul>
+
+  <div class="gold-rule"><span></span><i>✦</i><span></span></div>
+
+  <h2 class="ru">Херцег-Нови, Бар, Улцинь</h2>
+  <h2 class="en">Herceg Novi, Bar, Ulcinj</h2>
+  <h2 class="me">Herceg Novi, Bar, Ulcinj</h2>
+
+  <p class="ru-block">Южный и западный сегменты побережья активно развиваются. Херцег-Нови — исторический город у входа в Которский залив с высоким спросом на реставрацию и новое строительство. Бар и Улцинь — растущие туристические центры, где мы выполняем как жилые, так и коммерческие проекты.</p>
+  <p class="en-block">The southern and western coastal segments are developing rapidly. Herceg Novi is a historic city at the entrance to Kotor Bay with high demand for restoration and new construction. Bar and Ulcinj are growing tourist centres where we carry out both residential and commercial projects.</p>
+  <p class="me-block">Južni i zapadni priobalni segmenti se intenzivno razvijaju. Herceg Novi je istorijski grad na ulazu u Bokokotorski zaliv s velikom potražnjom za restauracijom i novogradnjom. Bar i Ulcinj su rastuće turističke destinacije gdje realizujemo i stambene i komercijalne projekte.</p>
+
+  <div class="gold-rule"><span></span><i>✦</i><span></span></div>
+
+  <h2 class="ru">Север страны: Колашин, Жабляк и горные регионы</h2>
+  <h2 class="en">The north: Kolašin, Žabljak and mountain regions</h2>
+  <h2 class="me">Sjever zemlje: Kolašin, Žabljak i planinske regije</h2>
+
+  <div class="aeo-box">
+    <span class="aeo-label"><span class="ru">Краткий ответ</span><span class="en">Quick answer</span><span class="me">Kratak odgovor</span></span>
+    <p class="ru-block">Да, Mramor MNE работает в горных регионах Черногории. Колашин и Жабляк — популярные горнолыжные курорты с активным строительством туристической недвижимости. Для горного климата мы рекомендуем гранит — морозостойкий и устойчивый к перепадам температур.</p>
+    <p class="en-block">Yes, Mramor MNE works in Montenegro's mountain regions. Kolašin and Žabljak are popular ski resorts with active tourist property construction. For the mountain climate we recommend granite — frost-resistant and stable across temperature changes.</p>
+    <p class="me-block">Da, Mramor MNE radi u planinskim regijama Crne Gore. Kolašin i Žabljak su popularni skijaški centri s intenzivnom izgradnjom turističkih nekretnina. Za planinsku klimu preporučujemo granit — otporan na mraz i stabilan pri promjenama temperature.</p>
+  </div>
+
+  <!-- SERVICES BY REGION TABLE -->
+  <h3><span class="ru">Услуги по регионам:</span><span class="en">Services by region:</span><span class="me">Usluge po regijama:</span></h3>
+  <div class="blog-table-wrap">
+    <table class="blog-table">
+      <thead>
+        <tr>
+          <th><span class="ru">Регион</span><span class="en">Region</span><span class="me">Regija</span></th>
+          <th><span class="ru">Города</span><span class="en">Cities</span><span class="me">Gradovi</span></th>
+          <th><span class="ru">Популярные услуги</span><span class="en">Popular services</span><span class="me">Popularne usluge</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ru">Столичный</span><span class="en">Capital</span><span class="me">Prijestonica</span></td>
+          <td>Podgorica, Danilovgrad, Cetinje</td>
+          <td><span class="ru">Столешницы, полы, камины, лестницы</span><span class="en">Worktops, floors, fireplaces, staircases</span><span class="me">Radne ploče, podovi, kamini, stepenice</span></td>
+        </tr>
+        <tr>
+          <td><span class="ru">Центральное побережье</span><span class="en">Central coast</span><span class="me">Centralna obala</span></td>
+          <td>Budva, Kotor, Tivat</td>
+          <td><span class="ru">Элитные интерьеры, оникс, bookmatch, фасады</span><span class="en">Elite interiors, onyx, bookmatch, facades</span><span class="me">Elitni enterijeri, oniks, bookmatch, fasade</span></td>
+        </tr>
+        <tr>
+          <td><span class="ru">Западное побережье</span><span class="en">Western coast</span><span class="me">Zapadna obala</span></td>
+          <td>Herceg Novi, Igalo</td>
+          <td><span class="ru">Реставрация, фасады, жилые проекты</span><span class="en">Restoration, facades, residential projects</span><span class="me">Restauracija, fasade, stambeni projekti</span></td>
+        </tr>
+        <tr>
+          <td><span class="ru">Южное побережье</span><span class="en">Southern coast</span><span class="me">Južna obala</span></td>
+          <td>Bar, Ulcinj</td>
+          <td><span class="ru">Коммерческие объекты, отели, виллы</span><span class="en">Commercial properties, hotels, villas</span><span class="me">Komercijalni objekti, hoteli, vile</span></td>
+        </tr>
+        <tr>
+          <td><span class="ru">Горные курорты</span><span class="en">Mountain resorts</span><span class="me">Planinska odmarališta</span></td>
+          <td>Kolašin, Žabljak</td>
+          <td><span class="ru">Гранит, фасады, камины для шале</span><span class="en">Granite, facades, fireplaces for chalets</span><span class="me">Granit, fasade, kamini za šalete</span></td>
+        </tr>
+        <tr>
+          <td><span class="ru">Северный регион</span><span class="en">Northern region</span><span class="me">Sjeverna regija</span></td>
+          <td>Pljevlja, Bijelo Polje, Berane</td>
+          <td><span class="ru">Промышленные и жилые объекты</span><span class="en">Industrial and residential properties</span><span class="me">Industrijski i stambeni objekti</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="expert-box">
+    <div class="expert-avatar">🗺</div>
+    <div class="expert-content">
+      <blockquote>
+        <span class="ru-block">За 16 лет мы побывали в каждом уголке Черногории. От шале в Жабляке до вилл в Порто-Монтенегро. Каждый регион имеет свою специфику — климат, архитектуру, предпочтения. Я горжусь тем, что наша команда способна закрыть любой запрос в любой точке страны с одинаково высоким качеством.</span>
+        <span class="en-block">In 16 years we have been to every corner of Montenegro. From chalets in Žabljak to villas in Porto Montenegro. Every region has its own specifics — climate, architecture, preferences. I am proud that our team can handle any request in any part of the country with equally high quality.</span>
+        <span class="me-block">Za 16 godina bili smo u svakom kutku Crne Gore. Od šaleta u Žabljaku do vila u Porto Montenegru. Svaka regija ima svoju specifičnost — klimu, arhitekturu, preferencije. Ponosan sam što naš tim može odgovoriti na svaki zahtjev u bilo kom dijelu zemlje s jednakim visokim kvalitetom.</span>
+      </blockquote>
+      <div class="expert-name">Mihail R.</div>
+      <div class="expert-role"><span class="ru">Директор по производству, Mramor MNE · с 2010 года</span><span class="en">Production Director, Mramor MNE · since 2010</span><span class="me">Direktor proizvodnje, Mramor MNE · od 2010. godine</span></div>
+    </div>
+  </div>
+
+  <div class="internal-links">
+    <span class="internal-links-title"><span class="ru">Читайте также</span><span class="en">Read also</span><span class="me">Pročitajte i</span></span>
+    <ul>
+      <li><a href="blog-montazh.html"><span class="ru">Монтаж натурального камня — что входит в сервис?</span><span class="en">Natural stone installation — what is included in the service?</span><span class="me">Montaža prirodnog kamena — šta je uključeno u uslugu?</span></a></li>
+      <li><a href="blog-mramor-granit.html"><span class="ru">Мрамор vs Гранит — что лучше для черногорского климата?</span><span class="en">Marble vs Granite — which is better for Montenegro's climate?</span><span class="me">Mermer vs Granit — šta je bolje za crnogorsku klimu?</span></a></li>
+      <li><a href="index.html#contact"><span class="ru">Связаться с нами — выезд по всей Черногории</span><span class="en">Contact us — site visits throughout Montenegro</span><span class="me">Kontaktirajte nas — izlasci širom Crne Gore</span></a></li>
+    </ul>
+  </div>
+
+  <div class="blog-cta">
+    <h3><span class="ru">Мы работаем в вашем городе</span><span class="en">We work in your city</span><span class="me">Radimo u vašem gradu</span></h3>
+    <p><span class="ru">Выезд мастера на замер — по всей Черногории. Звоните или оставьте заявку.</span><span class="en">Master site visit for measurement — throughout Montenegro. Call or leave a request.</span><span class="me">Izlazak majstora na mjerenje — širom Crne Gore. Pozovite ili ostavite zahtjev.</span></p>
+    <a href="index.html#contact" class="cta-btn"><span class="ru">Оставить заявку</span><span class="en">Leave a request</span><span class="me">Ostavite zahtjev</span></a>
+  </div>
+
+</article>
+<script>function setLang(lang,btn){document.body.className='lang-'+lang;document.querySelectorAll('.lbtn').forEach(function(b){b.classList.remove('on')});if(btn)btn.classList.add('on')}</script>
+</body>
+</html>
