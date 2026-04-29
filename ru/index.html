@@ -953,6 +953,25 @@ document.querySelectorAll('.lbtn').forEach(btn => {
   }
 });
 
+  document.addEventListener('DOMContentLoaded', function() {
+  // 1. Get the language from the URL (e.g., ?lang=en)
+  const urlParams = new URLSearchParams(window.location.search);
+  let lang = urlParams.get('lang') || 'me'; // Default to 'me' if no lang in URL
+
+  // 2. Apply the class to the body to switch content
+  document.body.className = 'lang-' + lang;
+
+  // 3. Update the 'active' state of the buttons
+  document.querySelectorAll('.lbtn').forEach(btn => btn.classList.remove('on'));
+  const activeBtn = document.getElementById('btn-' + lang);
+  if (activeBtn) activeBtn.classList.add('on');
+  
+  // 4. Update form placeholders (if you have them)
+  if (typeof updatePlaceholders === "function") {
+    updatePlaceholders(lang);
+  }
+});
+
 // Set correct placeholders on page load based on active language
 const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
                  : document.body.classList.contains('lang-en') ? 'en'
