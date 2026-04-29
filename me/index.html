@@ -269,11 +269,11 @@ textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
 <body class="lang-me">
 
 <div id="lb">
-  <button class="lbtn" onclick="setLang('ru')">РУС</button>
+  <a href="?lang=ru" class="lbtn" id="btn-ru">РУС</a>
   <span class="lsep">·</span>
-  <button class="lbtn" onclick="setLang('en')">ENG</button>
+  <a href="?lang=en" class="lbtn" id="btn-en">ENG</a>
   <span class="lsep">·</span>
-  <button class="lbtn on" onclick="setLang('me')">MNE</button>
+  <a href="?lang=me" class="lbtn" id="btn-me">MNE</a>
 </div>
 
 <nav id="nav">
@@ -934,6 +934,25 @@ document.querySelectorAll('.lbtn').forEach(btn => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // 1. Get the language from the URL (e.g., ?lang=en)
+  const urlParams = new URLSearchParams(window.location.search);
+  let lang = urlParams.get('lang') || 'me'; // Default to 'me' if no lang in URL
+
+  // 2. Apply the class to the body to switch content
+  document.body.className = 'lang-' + lang;
+
+  // 3. Update the 'active' state of the buttons
+  document.querySelectorAll('.lbtn').forEach(btn => btn.classList.remove('on'));
+  const activeBtn = document.getElementById('btn-' + lang);
+  if (activeBtn) activeBtn.classList.add('on');
+  
+  // 4. Update form placeholders (if you have them)
+  if (typeof updatePlaceholders === "function") {
+    updatePlaceholders(lang);
+  }
+});
+  
 // Set correct placeholders on page load based on active language
 const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
                  : document.body.classList.contains('lang-en') ? 'en'
