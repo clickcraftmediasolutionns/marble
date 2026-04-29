@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mramor MNE</title>
+<script>
+  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (lang.startsWith('ru')) { location.replace('/ru/'); }
+  else if (lang.startsWith('sr') || lang.startsWith('bs') || lang.startsWith('hr') || lang.startsWith('cnr')) { location.replace('/me/'); }
+  else { location.replace('/en/'); }
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0;url=/en/">
+</noscript>
+</head>
+<body></body>
+</html>
