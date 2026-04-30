@@ -984,16 +984,18 @@ updatePlaceholders(activeLang);
 </script>
 
 <script>
-document.addEventListener("click", function(e) {
-  // Check if the clicked element is one of our language buttons
-  if (e.target && e.target.classList.contains('lbtn')) {
-    const targetUrl = e.target.getAttribute('href');
-    if (targetUrl) {
-      e.preventDefault(); // Stop the old ?lang= behavior
-      window.location.replace(targetUrl); // Force immediate redirect
-    }
-  }
-});
+document.getElementById('btn-me').onclick = function(e) {
+    e.preventDefault();
+    window.location.href = "https://www.mramormne.com";
+};
+document.getElementById('btn-ru').onclick = function(e) {
+    e.preventDefault();
+    window.location.href = "https://www.mramormne.com/ru/";
+};
+document.getElementById('btn-en').onclick = function(e) {
+    e.preventDefault();
+    window.location.href = "https://www.mramormne.com/en/";
+};
 </script>
   
 </body>
