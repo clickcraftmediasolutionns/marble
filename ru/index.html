@@ -1001,5 +1001,30 @@ const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
                  : 'me';
 updatePlaceholders(activeLang);
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = {
+    'btn-ru': '/ru/',
+    'btn-en': '/en/',
+    'btn-me': '/' // Assuming 'me' is the root directory
+  };
+
+  Object.keys(buttons).forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); // Stop the "?lang=" behavior
+        window.location.href = buttons[id];
+      });
+    }
+  });
+});
+</script>
 </body>
 </html>
+
+
+
+
+
+
