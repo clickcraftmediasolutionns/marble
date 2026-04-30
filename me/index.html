@@ -983,25 +983,19 @@ const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
 updatePlaceholders(activeLang);
 </script>
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const buttons = {
-    'btn-ru': '/ru/',
-    'btn-en': '/en/',
-    'btn-me': 'https://www.mramormne.com/'
-  };
-
-  Object.keys(buttons).forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault(); // Stop the "?lang=" behavior
-        window.location.href = buttons[id];
-      });
+<script>
+document.addEventListener("click", function(e) {
+  // Check if the clicked element is one of our language buttons
+  if (e.target && e.target.classList.contains('lbtn')) {
+    const targetUrl = e.target.getAttribute('href');
+    if (targetUrl) {
+      e.preventDefault(); // Stop the old ?lang= behavior
+      window.location.replace(targetUrl); // Force immediate redirect
     }
-  });
+  }
 });
 </script>
+  
 </body>
   
 </html
