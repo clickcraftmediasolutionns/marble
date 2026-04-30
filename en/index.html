@@ -292,11 +292,11 @@ textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
 <body class="lang-en">
 
 <div id="lb">
-  <a href="/ru/" class="lbtn" id="btn-ru">РУС</a>
+  <a href="https://www.mramormne.com/" class="lbtn" id="btn-me">MNE</a>
   <span class="lsep">·</span>
-  <a href="/en/" class="lbtn" id="btn-en">ENG</a>
+  <a href="https://www.mramormne.com/ru/" class="lbtn" id="btn-ru">РУС</a>
   <span class="lsep">·</span>
-<a href="https://www.mramormne.com/" class="lbtn" id="btn-me">MNE</a>
+  <a href="https://www.mramormne.com/en/" class="lbtn" id="btn-en">ENG</a>
 </div>
 
 <nav id="nav">
@@ -964,25 +964,19 @@ const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
 updatePlaceholders(activeLang);
 </script>
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const buttons = {
-    'btn-ru': '/ru/',
-    'btn-en': '/en/',
-    'btn-me': 'https://www.mramormne.com/'
-  };
-
-  Object.keys(buttons).forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault(); // Stop the "?lang=" behavior
-        window.location.href = buttons[id];
-      });
+<script>
+document.addEventListener("click", function(e) {
+  // Check if the clicked element is one of our language buttons
+  if (e.target && e.target.classList.contains('lbtn')) {
+    const targetUrl = e.target.getAttribute('href');
+    if (targetUrl) {
+      e.preventDefault(); // Stop the old ?lang= behavior
+      window.location.replace(targetUrl); // Force immediate redirect
     }
-  });
+  }
 });
 </script>
+  
 </body>
 </html>
 
