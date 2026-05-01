@@ -4,15 +4,11 @@
 <meta charset="UTF-8">
 <title>Mramor MNE</title>
 <script>
-  // Check if user previously chose a language
   var chosen = document.cookie.match(/lang=([a-z]+)/);
   if (chosen) {
     location.replace('/' + chosen[1] + '/');
   } else {
-    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-    if (lang.startsWith('ru')) { location.replace('/ru/'); }
-    else if (lang.startsWith('en')) { location.replace('/en/'); }
-    else { location.replace('/me/'); }
+    location.replace('/me/');
   }
 </script>
 <noscript>
