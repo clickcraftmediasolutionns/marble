@@ -947,6 +947,16 @@ function updatePlaceholders(lang) {
 </script>
 
 <script>
+document.getElementById('btn-me').onclick = function() {
+  document.cookie = "lang=me; path=/; max-age=31536000";
+};
+document.getElementById('btn-en').onclick = function() {
+  document.cookie = "lang=en; path=/; max-age=31536000";
+};
+document.getElementById('btn-ru').onclick = function() {
+  document.cookie = "lang=ru; path=/; max-age=31536000";
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   var lang = document.body.classList.contains('lang-ru') ? 'ru'
            : document.body.classList.contains('lang-en') ? 'en'
@@ -956,6 +966,7 @@ document.addEventListener('DOMContentLoaded', function() {
   updatePlaceholders(lang);
 });
 </script>
+
   
 </body>
   
