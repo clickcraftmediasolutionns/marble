@@ -4,13 +4,19 @@
 <meta charset="UTF-8">
 <title>Mramor MNE</title>
 <script>
-  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-  if (lang.startsWith('ru')) { location.replace('/ru/'); }
-  else if (lang.startsWith('sr') || lang.startsWith('bs') || lang.startsWith('hr') || lang.startsWith('cnr')) { location.replace('/me/'); }
-  else { location.replace('/en/'); }
+  // Check if user previously chose a language
+  var chosen = document.cookie.match(/lang=([a-z]+)/);
+  if (chosen) {
+    location.replace('/' + chosen[1] + '/');
+  } else {
+    var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    if (lang.startsWith('ru')) { location.replace('/ru/'); }
+    else if (lang.startsWith('en')) { location.replace('/en/'); }
+    else { location.replace('/me/'); }
+  }
 </script>
 <noscript>
-  <meta http-equiv="refresh" content="0;url=/en/">
+  <meta http-equiv="refresh" content="0;url=/me/">
 </noscript>
 </head>
 <body></body>
