@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="ru">
+<html lang="me">
 <head>
   
-<link rel="alternate" hreflang="ru" href="https://www.mramormne.com/ru/" />
+<link rel="alternate" hreflang="sr-ME" href="https://www.mramormne.com/" />
 <link rel="alternate" hreflang="x-default" href="https://www.mramormne.com/" />
 
   <script type="application/ld+json">
@@ -289,9 +289,9 @@ textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
 }
 </script>
 </head>
-<body class="lang-ru">
+<body class="lang-me">
 
-  <div id="lb">
+<div id="lb">
   <a href="/ru/" class="lbtn" id="btn-ru">РУС</a>
   <span class="lsep">·</span>
   <a href="/en/" class="lbtn" id="btn-en">ENG</a>
@@ -574,7 +574,7 @@ textarea.fi { min-height:120px; resize:vertical; line-height:1.7; }
     <div><div class="snum">5K+</div><div class="slbl"><span class="ru">выполненных заказов</span><span class="en">orders completed</span><span class="me">izvršenih narudžbi</span></div></div>
     <div><div class="snum">1500+</div><div class="slbl"><span class="ru">довольных клиентов</span><span class="en">satisfied clients</span><span class="me">zadovoljnih klijenata</span></div></div>
   </div>
-  <p class="atxt">
+   <p class="atxt">
     <span class="ru"><strong>Наша компания на рынке камнеобработки 16 лет.</strong> За это время мы выполнили более 5 тысяч индивидуальных заказов. Мы предлагаем полный комплекс услуг — проектирование, производство и установку изделий из натурального и искусственного камня. Работы выполняется опытными специалистами в Будве, Тивате, Которе, Подгорице и не только.</span>
     <span class="en"><strong>Our company has been in the stone processing market for 16 years.</strong> During this time we have completed over 5,000 individual orders. We offer a full range of services — design, manufacturing and installation of natural and engineered stone products, carried out by experienced specialists in Budva, Tivat, Kotor, Podgorica and not only.</span>
     <span class="me"><strong>Naša kompanija djeluje na tržištu obrade kamena već 16 godina.</strong> U tom periodu izvršili smo preko 5.000 individualnih narudžbi. Nudimo kompletan paket usluga — projektovanje, urađeno od strane iskusnih stručnjaka u Budvi, Tivatu, Kotoru, Podgorici i šire.</span>
@@ -956,14 +956,25 @@ document.getElementById('btn-en').onclick = function(e) {
     e.preventDefault();
     window.location.href = "https://www.mramormne.com/en/";
 };
-</script>
 
+// Highlight active language button based on body class
+document.addEventListener('DOMContentLoaded', function() {
+  var lang = document.body.classList.contains('lang-ru') ? 'ru'
+           : document.body.classList.contains('lang-en') ? 'en'
+           : 'me';
+  var activeBtn = document.getElementById('btn-' + lang);
+  if (activeBtn) activeBtn.classList.add('on');
+  updatePlaceholders(lang);
+});
+</script>
+  
 </body>
   
-</html>
+</html
 
 
 
 
 
 
+  
