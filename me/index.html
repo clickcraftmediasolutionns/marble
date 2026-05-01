@@ -956,6 +956,16 @@ document.getElementById('btn-en').onclick = function(e) {
     e.preventDefault();
     window.location.href = "https://www.mramormne.com/en/";
 };
+
+// Highlight active language button based on body class
+document.addEventListener('DOMContentLoaded', function() {
+  var lang = document.body.classList.contains('lang-ru') ? 'ru'
+           : document.body.classList.contains('lang-en') ? 'en'
+           : 'me';
+  var activeBtn = document.getElementById('btn-' + lang);
+  if (activeBtn) activeBtn.classList.add('on');
+  updatePlaceholders(lang);
+});
 </script>
   
 </body>
