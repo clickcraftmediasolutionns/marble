@@ -783,9 +783,9 @@ function setLang(l){
   document.querySelectorAll('.lbtn').forEach(function(b){b.classList.remove('on');});
   var idx={ru:0,en:1,me:2};
   document.querySelectorAll('.lbtn')[idx[l]].classList.add('on');
-  document.getElementById('fn').placeholder=ph[l][0];
-  document.getElementById('ft').placeholder=ph[l][1];
-  document.getElementById('fm').placeholder=ph[l][2];
+  document.getElementById('fname').placeholder=ph[l][0];
+  document.getElementById('fcontact').placeholder=ph[l][1];
+  document.getElementById('fmessage').placeholder=ph[l][2];
 }
 </script>
 
@@ -873,13 +873,7 @@ document.addEventListener('keydown', function(e){
   }
 });
 
-/* On load: show first 10 only */
-document.addEventListener('DOMContentLoaded', function(){
-  var all = Array.from(document.querySelectorAll('.gi'));
-  all.slice(GF_PREVIEW).forEach(function(el){ el.classList.add('g-preview'); });
-  var w = document.getElementById('showmore-wrap');
-  if (w && all.length > GF_PREVIEW) w.style.display = 'flex';
-});
+
 </script>
 
 <!-- LIGHTBOX -->
@@ -947,59 +941,6 @@ function updatePlaceholders(lang) {
   });
 }
 
-// Hook into the language buttons directly
-document.querySelectorAll('.lbtn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const lang = this.textContent.trim() === 'РУС' ? 'ru'
-               : this.textContent.trim() === 'ENG' ? 'en'
-               : 'me';
-    updatePlaceholders(lang);
-  });
-});
-
-  document.addEventListener('DOMContentLoaded', function() {
-  // 1. Get the language from the URL (e.g., ?lang=en)
-  const urlParams = new URLSearchParams(window.location.search);
-  let lang = urlParams.get('lang') || 'me'; // Default to 'me' if no lang in URL
-
-  // 2. Apply the class to the body to switch content
-  document.body.className = 'lang-' + lang;
-
-  // 3. Update the 'active' state of the buttons
-  document.querySelectorAll('.lbtn').forEach(btn => btn.classList.remove('on'));
-  const activeBtn = document.getElementById('btn-' + lang);
-  if (activeBtn) activeBtn.classList.add('on');
-  
-  // 4. Update form placeholders (if you have them)
-  if (typeof updatePlaceholders === "function") {
-    updatePlaceholders(lang);
-  }
-});
-
-  document.addEventListener('DOMContentLoaded', function() {
-  // 1. Get the language from the URL (e.g., ?lang=en)
-  const urlParams = new URLSearchParams(window.location.search);
-  let lang = urlParams.get('lang') || 'me'; // Default to 'me' if no lang in URL
-
-  // 2. Apply the class to the body to switch content
-  document.body.className = 'lang-' + lang;
-
-  // 3. Update the 'active' state of the buttons
-  document.querySelectorAll('.lbtn').forEach(btn => btn.classList.remove('on'));
-  const activeBtn = document.getElementById('btn-' + lang);
-  if (activeBtn) activeBtn.classList.add('on');
-  
-  // 4. Update form placeholders (if you have them)
-  if (typeof updatePlaceholders === "function") {
-    updatePlaceholders(lang);
-  }
-});
-
-// Set correct placeholders on page load based on active language
-const activeLang = document.body.classList.contains('lang-ru') ? 'ru'
-                 : document.body.classList.contains('lang-en') ? 'en'
-                 : 'me';
-updatePlaceholders(activeLang);
 </script>
 
 <script>
@@ -1016,8 +957,9 @@ document.getElementById('btn-en').onclick = function(e) {
     window.location.href = "https://www.mramormne.com/en/";
 };
 </script>
-  
+
 </body>
+  
 </html>
 
 
