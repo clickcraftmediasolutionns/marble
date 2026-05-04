@@ -1,0 +1,43 @@
+# robots.txt for mramormne.com
+# Updated for GEO/AEO — AI crawlers explicitly allowed
+
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /privacy-policy/
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Google AI (AI Overviews / Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Microsoft Copilot / Bing
+User-agent: bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap
+Sitemap: https://mramormne.com/sitemap.xml
