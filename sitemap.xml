@@ -1,42 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  MERGED SITEMAP — mramormne.com
+  Combines your existing pages with hreflang language linking.
+
+  INSTRUCTIONS:
+  1. Replace this file at https://www.mramormne.com/sitemap.xml
+  2. For each blog article, add the Russian and Montenegrin version URLs
+     once those pages exist (marked with TODO below)
+  3. Re-submit in Google Search Console after uploading
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ======= HOMEPAGE ======= -->
   <url>
     <loc>https://www.mramormne.com/</loc>
     <lastmod>2026-04-28</lastmod>
-    <priority>1.00</priority>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <!-- TODO: uncomment and fill once /ru/ and /me/ homepages have their own URLs -->
+    <!-- <xhtml:link rel="alternate" hreflang="en" href="https://www.mramormne.com/en/"/> -->
+    <!-- <xhtml:link rel="alternate" hreflang="ru" href="https://www.mramormne.com/ru/"/> -->
+    <!-- <xhtml:link rel="alternate" hreflang="cnr" href="https://www.mramormne.com/me/"/> -->
+    <!-- <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mramormne.com/"/> -->
   </url>
+
+  <!-- ======= BLOG INDEX ======= -->
   <url>
     <loc>https://www.mramormne.com/blog.html</loc>
     <lastmod>2026-04-28</lastmod>
-    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
+
+  <!-- ======= BLOG ARTICLES ======= -->
+
+  <!-- Article: Geography / where we work -->
   <url>
-    <loc>https://www.mramormne.com/blog-geografiya.html</loc> <lastmod>2026-04-28</lastmod>
+    <loc>https://www.mramormne.com/blog-geografiya.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <!-- TODO: add when RU/ME versions are published -->
+    <!-- <xhtml:link rel="alternate" hreflang="ru" href="https://www.mramormne.com/blog-geografiya-ru.html"/> -->
+    <!-- <xhtml:link rel="alternate" hreflang="cnr" href="https://www.mramormne.com/blog-geografiya-me.html"/> -->
   </url>
+
+  <!-- Article: Installation -->
   <url>
     <loc>https://www.mramormne.com/blog-montazh.html</loc>
     <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Article: Marble vs Granite -->
   <url>
     <loc>https://www.mramormne.com/blog-mramor-granit.html</loc>
     <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Article: Stone selection guide -->
   <url>
     <loc>https://www.mramormne.com/blog-vybor-kamnya.html</loc>
     <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Article: Quartzite and Onyx -->
   <url>
     <loc>https://www.mramormne.com/blog-kvartsit-oniks.html</loc>
     <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- Article: Restoration -->
   <url>
     <loc>https://www.mramormne.com/blog-restavratsiya.html</loc>
     <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!--
+    ADD NEW ARTICLES HERE as you publish them:
+
+    <url>
+      <loc>https://www.mramormne.com/blog-YOUR-SLUG.html</loc>
+      <lastmod>YYYY-MM-DD</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.80</priority>
+    </url>
+  -->
+
 </urlset>
